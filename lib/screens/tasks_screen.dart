@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:background_memo/widgets/tasks_list.dart';
+import 'package:background_memo/screens/add_task_screen.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -12,7 +15,8 @@ class TasksScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () {
-          // Do some action
+          showModalBottomSheet(
+              context: context, builder: (context) => AddTaskScreen());
         },
       ),
       body: Column(
@@ -42,10 +46,12 @@ class TasksScreen extends StatelessWidget {
                 ),
                 Text(
                   'Background Memo',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
+                  style: GoogleFonts.lato(
+                    textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.5),
                   ),
                 ),
                 SizedBox(
@@ -66,6 +72,10 @@ class TasksScreen extends StatelessWidget {
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(30.0),
+                child: TasksList(),
               ),
             ),
           )
