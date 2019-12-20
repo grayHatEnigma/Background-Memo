@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatelessWidget {
+  String inputText;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,6 +34,9 @@ class AddTaskScreen extends StatelessWidget {
               ),
               autofocus: true,
               textAlign: TextAlign.center,
+              onChanged: (userInput) {
+                inputText = userInput;
+              },
             ),
             FlatButton(
               color: Colors.lightBlueAccent,
@@ -39,9 +44,7 @@ class AddTaskScreen extends StatelessWidget {
                 'Add',
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              onPressed: () {
-                print('Add pressed');
-              },
+              onPressed: () {},
             ),
           ],
         ),
