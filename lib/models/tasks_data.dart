@@ -1,9 +1,13 @@
+import 'dart:collection';
+import 'dart:typed_data';
+
 import 'package:background_memo/models/task.dart';
 import 'package:flutter/foundation.dart';
 
 class TasksData with ChangeNotifier {
   List<Task> _tasks = [];
-  List<Task> get tasksList => _tasks;
+  UnmodifiableListView<Task> get tasksList =>
+      UnmodifiableListView<Task>(_tasks);
   int get size => _tasks.length;
 
   void addTask(String task) {
@@ -13,6 +17,11 @@ class TasksData with ChangeNotifier {
 
   void toggleDone(Task task) {
     task.toggleDone();
+    notifyListeners();
+  }
+
+  void deleteTask(Task task) {
+    _tasks.remove(task);
     notifyListeners();
   }
 }

@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:background_memo/widgets/tasks_list.dart';
 import 'package:background_memo/test_add_task_screen.dart';
-
-import 'package:background_memo/screens/add_task_screen.dart';
 import 'package:provider/provider.dart';
 
 class TasksScreen extends StatelessWidget {
