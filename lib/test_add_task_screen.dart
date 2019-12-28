@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:background_memo/models/tasks_data.dart';
 
-String newTaskTitle;
-
-class AddTaskScreen extends StatelessWidget {
+class TestAddTaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color(0xFF757575),
-      child: Container(
-        padding: EdgeInsets.all(20),
+    String newTaskTitle;
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.all(50),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -20,7 +18,7 @@ class AddTaskScreen extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'Add a Task',
@@ -50,10 +48,8 @@ class AddTaskScreen extends StatelessWidget {
               ),
               onPressed: () {
                 if (newTaskTitle != null) {
-                  print(newTaskTitle);
-                  print(context.toString());
-                  print(Provider.of<TasksData>(context).toString());
-                  // Navigator.pop(context);
+                  Provider.of<TasksData>(context).addTask(newTaskTitle);
+                  Navigator.pop(context);
                 }
               },
             ),

@@ -1,4 +1,6 @@
-class Task {
+import 'package:flutter/widgets.dart';
+
+class Task with ChangeNotifier {
   final String name;
   bool isDone;
 

@@ -1,7 +1,12 @@
+import 'package:background_memo/models/tasks_data.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:background_memo/widgets/tasks_list.dart';
+import 'package:background_memo/test_add_task_screen.dart';
+
 import 'package:background_memo/screens/add_task_screen.dart';
+import 'package:provider/provider.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -15,8 +20,17 @@ class TasksScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () {
-          showModalBottomSheet(
-              context: context, builder: (context) => AddTaskScreen());
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => TestAddTaskScreen(),
+            ),
+          );
+
+//            showModalBottomSheet(
+//              context: context,
+//              builder: (context) => AddTaskScreen(),
+//            );
         },
       ),
       body: Column(
@@ -58,7 +72,7 @@ class TasksScreen extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  '12 Tasks',
+                  '${Provider.of<TasksData>(context).size} Tasks',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 )
               ],
@@ -78,7 +92,7 @@ class TasksScreen extends StatelessWidget {
                 child: TasksList(),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
