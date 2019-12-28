@@ -3,8 +3,8 @@
 a very handy to-do app.
 
 # Preview
-<img src="https://i.imgur.com/wtFREx6.png" width="360" height="600">
-<img src="https://i.imgur.com/IhA9c0H.png" width="360" height="600">
+<img src="https://i.imgur.com/wtFREx6.png" width="330" height="600">
+<img src="https://i.imgur.com/IhA9c0H.png" width="330" height="600">
 
 
 # What I've learned developing this app
