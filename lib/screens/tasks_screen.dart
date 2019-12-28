@@ -58,7 +58,7 @@ class TasksScreen extends StatelessWidget {
                 ),
                 Text(
                   'Background Memo',
-                  style: GoogleFonts.lato(
+                  style: GoogleFonts.adamina(
                     textStyle: TextStyle(
                         color: Colors.white,
                         fontSize: 30,
@@ -70,7 +70,7 @@ class TasksScreen extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  '${Provider.of<TasksData>(context).size} Tasks',
+                  '${Provider.of<TasksData>(context).size} Task${Provider.of<TasksData>(context).size <= 1 ? '' : 's'}',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 )
               ],

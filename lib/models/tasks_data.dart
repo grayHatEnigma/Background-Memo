@@ -1,6 +1,4 @@
 import 'dart:collection';
-import 'dart:typed_data';
-
 import 'package:background_memo/models/task.dart';
 import 'package:flutter/foundation.dart';
 
@@ -15,13 +13,13 @@ class TasksData with ChangeNotifier {
     notifyListeners();
   }
 
-  void toggleDone(Task task) {
-    task.toggleDone();
+  void deleteTask(Task task) {
+    _tasks.remove(task);
     notifyListeners();
   }
 
-  void deleteTask(Task task) {
-    _tasks.remove(task);
+  void toggleDone(Task task) {
+    task.toggleDone();
     notifyListeners();
   }
 }

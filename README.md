@@ -1,16 +1,19 @@
-# background_memo
+# Background Memo
 
 a very handy to-do app.
 
-## Getting Started
+# Preview
+<img src="https://i.imgur.com/wtFREx6.png" width="360" height="600">
+<img src="https://i.imgur.com/IhA9c0H.png" width="360" height="600">
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# What I've learned developing this app
+- State Management in Flutter ( setState - InheritedWidget - ScopedModel - Provider ).
+- The difference between ephemeral (local) state and app state.
+- The concept of Prop Drilling.
+- List Builder.
+- Flutter BottomSheet Widget.
+- Callbacks in Flutter.
+- Design Pattern.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
